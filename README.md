@@ -1,33 +1,33 @@
 # Ad Blocker RICKY
 
-Bloquea ads, trackers y malware en Windows a nivel de red. Un solo click, protege todo el equipo, no necesita extensiones ni software extra.
+Block ads, trackers, and malware on Windows at the network level. One click, protects the entire device, no extensions or extra software needed.
 
-## Beneficios
+## Benefits
 
-- **Sin ads en todas las apps**, no solo el navegador. Juegos, apps de Microsoft Store, tiendas, utilidades.
-- **Mas velocidad al navegar**, las webs cargan sin descargar banners, popups ni scripts de tracking.
-- **Menos consumo de datos**, especialmente util en conexiones medidas o lentas.
-- **Mas privacidad**, tu proveedor de internet y las redes publicas no pueden ver que dominios visitas.
-- **Proteccion contra malware**, dominios maliciosos conocidos quedan bloqueados antes de que carguen.
-- **Funciona con Wi-Fi y Ethernet al mismo tiempo**, sin fugas al cambiar de conexion.
-- **Reversible al 100%**, un comando y vuelve todo a como estaba.
-- **Gratis para siempre**, sin cuenta, sin suscripcion, sin limites.
+- **No ads in any app**, not just the browser. Games, Microsoft Store apps, stores, utilities.
+- **Faster browsing**, websites load without banners, popups, or tracking scripts.
+- **Less data usage**, especially useful on metered or slow connections.
+- **More privacy**, your ISP and public networks cannot see which domains you visit.
+- **Malware protection**, known malicious domains are blocked before they load.
+- **Works with Wi-Fi and Ethernet at the same time**, no leaks when switching connections.
+- **100% reversible**, one command and everything goes back to how it was.
+- **Free forever**, no account, no subscription, no limits.
 
-## Instalacion rapida
+## Quick install
 
-### Opcion 1: Un solo archivo
+### Option 1: One file
 
-1. Descarga [Install.bat](https://raw.githubusercontent.com/Ricky-pok/Ad-Blocker-RICKY/main/Install.bat).
-2. Click derecho -> Ejecutar como administrador.
-3. Listo.
+1. Download [Install.bat](https://raw.githubusercontent.com/Ricky-pok/Ad-Blocker-RICKY/main/Install.bat).
+2. Right-click -> Run as administrator.
+3. Done.
 
-### Opcion 2: Una linea en PowerShell
+### Option 2: One PowerShell line
 
 ```powershell
 irm https://raw.githubusercontent.com/Ricky-pok/Ad-Blocker-RICKY/main/Set-MullvadDNS.ps1 | iex
 ```
 
-### Opcion 3: Clonar y ejecutar
+### Option 3: Clone and run
 
 ```powershell
 git clone https://github.com/Ricky-pok/Ad-Blocker-RICKY.git
@@ -35,41 +35,41 @@ cd Ad-Blocker-RICKY
 .\Set-MullvadDNS.ps1
 ```
 
-## Niveles de filtro
+## Filter variants
 
-| Variante | Que bloquea |
+| Variant | What it blocks |
 |---|---|
-| `base` | Nada, solo privacidad |
+| `base` | Nothing, only privacy |
 | `adblock` | Ads + trackers (**default**) |
-| `family` | Ads + trackers + malware + contenido adulto |
-| `all` | Todo + redes sociales + gambling |
+| `family` | Ads + trackers + malware + adult content |
+| `all` | Everything above + social media + gambling |
 
-Para cambiar el filtro:
+To change the filter:
 
 ```powershell
 .\Set-MullvadDNS.ps1 -List family
 ```
 
-## Verificar que funciona
+## Verify it works
 
 - https://mullvad.net/en/check
 - https://d3ward.github.io/toolz/adblock.html
 
-## Revertir
+## Revert
 
 ```powershell
 .\Set-MullvadDNS.ps1 -Rollback
 ```
 
-## Requisitos
+## Requirements
 
-- Windows 10 version 2004 + o Windows 11.
-- Permisos de administrador (el script se auto-eleva).
+- Windows 10 version 2004+ or Windows 11.
+- Administrator privileges (the script auto-elevates).
 
-## Licencia
+## License
 
-MIT. Ver [LICENSE](./LICENSE).
+MIT. See [LICENSE](./LICENSE).
 
-## Autor
+## Author
 
 Ricky (Jose E. Felix Vidal) - [@Ricky-pok](https://github.com/Ricky-pok)
