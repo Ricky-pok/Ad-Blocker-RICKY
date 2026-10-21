@@ -15,13 +15,16 @@ Block ads, trackers, and malware on Windows at the network level. One click, pro
 
 ## Quick install
 
-### Option 1: One file
+### Option 1: One file (recommended)
 
-1. Download [Install.bat](https://raw.githubusercontent.com/Ricky-pok/Ad-Blocker-RICKY/main/Install.bat).
-2. Right-click -> Run as administrator.
-3. Done.
+1. **[Download Install.bat](https://github.com/Ricky-pok/Ad-Blocker-RICKY/releases/latest/download/Install.bat)**
+2. Double-click the downloaded file.
+3. Accept the UAC prompt.
+4. Done.
 
 ### Option 2: One PowerShell line
+
+Open PowerShell as Administrator and paste:
 
 ```powershell
 irm https://raw.githubusercontent.com/Ricky-pok/Ad-Blocker-RICKY/main/Set-MullvadDNS.ps1 | iex
