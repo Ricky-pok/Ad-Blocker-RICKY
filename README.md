@@ -10,7 +10,7 @@ Block ads, trackers, and malware on Windows at the network level. One click, pro
 - **More privacy**, your ISP and public networks cannot see which domains you visit.
 - **Malware protection**, known malicious domains are blocked before they load.
 - **Works with Wi-Fi and Ethernet at the same time**, no leaks when switching connections.
-- **100% reversible**, one command and everything goes back to how it was.
+- **100% reversible**, one click and everything goes back to how it was.
 - **Free forever**, no account, no subscription, no limits.
 
 ## Quick install
@@ -38,6 +38,23 @@ cd Ad-Blocker-RICKY
 .\Set-MullvadDNS.ps1
 ```
 
+## Uninstall / Revert
+
+### Option 1: One file
+
+1. **[Download Uninstall.bat](https://github.com/Ricky-pok/Ad-Blocker-RICKY/releases/latest/download/Uninstall.bat)**
+2. Double-click the downloaded file.
+3. Accept the UAC prompt.
+4. Done.
+
+### Option 2: PowerShell
+
+```powershell
+.\Set-MullvadDNS.ps1 -Rollback
+```
+
+Reverts DNS to DHCP, removes the DoH endpoints, and restores default settings on every physical adapter.
+
 ## Filter variants
 
 | Variant | What it blocks |
@@ -58,16 +75,10 @@ To change the filter:
 - https://mullvad.net/en/check
 - https://d3ward.github.io/toolz/adblock.html
 
-## Revert
-
-```powershell
-.\Set-MullvadDNS.ps1 -Rollback
-```
-
 ## Requirements
 
 - Windows 10 version 2004+ or Windows 11.
-- Administrator privileges (the script auto-elevates).
+- Administrator privileges (both scripts auto-elevate).
 
 ## License
 
